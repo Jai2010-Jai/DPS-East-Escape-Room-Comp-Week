@@ -1,0 +1,29 @@
+{
+  "levels": {
+    "1": [
+      { "id": "q1", "title": "Decrypt the Destination", "body": "You've intercepted an *encrypted* string that hides the URL for the next stage of the event. The encryption is simple — each character has been replaced by its ASCII code.\n\nDecode the ASCII sequence to reveal the destination URL and follow it to find the flag for the next challenge.\n\n**Encrypted sequence (ASCII values):**\n\n*104 116 116 112 58 47 47 98 105 116 46 108 121 47 51 75 78 109 98 74 82*\n\nWhen correctly decrypted this will form a valid URL you can visit.\n\nInside this site is hidden the flag *Inspect* it closely to find what is within", "answer": "http://bit.ly/3KNmbJR", "hint": "Each number represents a character's ASCII value. Convert them to letters to form the URL." },
+      { "id": "q2", "title": "The Ciphered Message", "body": "You are given a **ciphered** code which you will have to decode in order to get the flag.***ZXMQROB IBYOLK***  --> ??", "answer": "capture lebron", "hint": "This is a placeholder hint for question 2." },
+      { "id": "q3", "title": "Base Instinct", "body": "Some secrets aren’t meant to be read at first glance. A single line of seemingly random characters hides your next clue. Can you uncover it?\n\n**Challenge:**You stumble upon the following string in a mysterious file:**ZmxhZzpob3BldXJoYXZpbmdmdW4=\n\n*****Task: **Decode* the string to reveal the hidden flag.", "answer": "answer3", "hint": "This is a placeholder hint for question 3." },
+      { "id": "q4", "title": "Invisible Ink", "body": "Sometimes secrets are right under your nose. A normal-looking paragraph hides a tiny treasure — only careful eyes will find it.\n\n**Challenge:**Firmware logs always generate: encryption algorithms secure your _ protocol efficiently kernel-side.\n\n**Task:**The flag is hidden in the paragraph. It follows the format: flag:{something}.", "answer": "answer4", "hint": "This is a placeholder hint for question 4." },
+      { "id": "q5", "title": "Status Report", "body": "Servers speak in *numbers*. Each ***HTTP*** status code below hides a short phrase — read the phrases in order and assemble the secret.\n\n**200 418**\n\n***Task:**** Convert each HTTP status code to its standard reason phrase* Concatenate those phrases in order.* Remove spaces and punctuation (including apostrophes), convert to lowercase.* Prepend flag: and submit.", "answer": "oki'mateapot", "hint": "This is a placeholder hint for question 5." },
+      { "id": "q6", "title": "Encrypted Time ", "body": "", "answer": "answer6", "hint": "This is a placeholder hint for question 6." },
+      { "id": "q7", "title": "Mirrored Perception", "body": "You have intercepted a cryptic, almost nonsensical code heading to a secret organisation known only as 'Paw Patrol'.\n\n **dogdog  dogdog / dogdog dogdog  / dogdog    dog/ dogdog  dogdogdog/  dogdogdog dog / dog dog  dogdog/ dog dog    / dog     dog/ dog    dogdog/ dog   dog dog**\n\n Alongside the code, a mysterious message is included. It says, 'A word takes a breath. No one breathes in space.' It seems to be a hint of some sort. Use this hint to decode the code. Your fate depends on it.", "answer": "answer7", "hint": "This is a placeholder hint for question 7." }
+    ],
+    "2": [
+      { "id": "q8", "title": "The Ciphered Coordinates", "body": "You are given a Vigenère ciphered code:***2704 Lshfhl Qal Y4***\n\nYour mission is to decode this message to uncover your next destination.\n\nTo unlock the message, follow the path of green innovation.The architect behind RTX holds the key — six letters, one vision.Once decoded, you will obtain a word and a highway name. \n\nUse these clues to open Google Earth, and navigate to the NVIDIA Head Office.Switch to Street View to continue your search.Hidden within the view lies a cryptic message. \n\nDecoding it will point you toward something nearby — a clue to your final discovery.\n\n💡 A taste of Maharashtra lies nearby — where something sweet, stuffed, and golden might just guide your path.˛Find that spot, and you’ll find your flag.", "answer": "puranpoli", "hint": "This is a placeholder hint for question 8." },
+      { "id": "q9", "title": "Eye Can't See", "body": "*** Nothing is ever truly invisible.***", "answer": "geekout", "hint": "This is a placeholder hint for question 9.", "fileUrl": "files/level2-q2.zip" },
+      { "id": "q10", "title": "Silent Syntax", "body": "A Python script runs *perfectly* and prints **meaningless** output. \n\nLook **inside** — the truth hides where the program does not *bother* to look.", "answer": "happens", "hint": "This is a placeholder hint for question 10.", "fileUrl": "files/level2-q3.zip" },
+      { "id": "q11", "title": "Binary Shadows", "body": "Replace with the real riddle.", "answer": "answer11", "hint": "This is a placeholder hint for question 11." },
+      { "id": "q12", "title": "Encrypted Echo", "body": "Replace with the real riddle.", "answer": "answer12", "hint": "This is a placeholder hint for question 12." }
+    ],
+    "3": [
+      { "id": "q13", "title": "Cold Spectrogram", "body": "**Sound** conceals its own shadow.  \n\nWithin this recording a *script* of light lies waiting, not audible, but *visible* if you know how to look.  \n\nFind the flag.", "answer": "code", "hint": "This is a placeholder hint for the final question.", "fileUrl": "files/level3-q1.wav" },
+      { "id": "q14", "title": "Quantum Paradox", "body": "Replace with the real riddle.", "answer": "answer14", "hint": "This is a placeholder hint for question 14." },
+      { "id": "q15", "title": "Final Encryption", "body": "Replace with the real riddle.", "answer": "answer15", "hint": "This is a placeholder hint for question 15." }
+    ]
+  },
+  "points": { "1": 30, "2": 60, "3": 120 },
+  "unlockRules": { "2": {"requireLevel": 1, "requireCount": 3}, "3": {"requireLevel": 2, "requireCount": 2} }
+}
+
+

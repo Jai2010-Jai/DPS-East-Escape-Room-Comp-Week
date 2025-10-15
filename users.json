@@ -1,0 +1,78 @@
+{
+    "users": {
+      "Team 1": {
+        "password": "alpha",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 2": {
+        "password": "beta", 
+        "points": 0,
+        "progress": {}
+      },
+      "Team 3": {
+        "password": "gamma",
+        "points": 0,
+        "progress": {}
+      }, 
+      "Team 4": {
+        "password": "omega",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 5": {
+        "password": "delta", 
+        "points": 0,
+        "progress": {}
+      },
+      "Team 6": {
+        "password": "zeta",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 7": {
+        "password": "sigma",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 8": {
+        "password": "theta", 
+        "points": 0,
+        "progress": {}
+      },
+      "Team 9": {
+        "password": "lambda",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 10": {
+        "password": "iota",
+        "points": 0,
+        "progress": {}
+      },
+      "Team 11": {
+        "password": "eta", 
+        "points": 0,
+        "progress": {}
+      },
+      "Team 12": {
+        "password": "epsilon",
+        "points": 0,
+        "progress": {}
+      },
+      "Test1": {
+        "password": "kothinti",
+        "points": 0,
+        "progress": {}
+      },
+      "Test2": {
+        "password": "phukan",
+        "points": 0,
+        "progress": {
+            "q1": true,
+            "q2": true,
+            "q3": false
+        }
+      }
+    }
+  }

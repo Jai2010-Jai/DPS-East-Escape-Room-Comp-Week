@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions • Digital Escape Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="bg-video" src="bg.mp4" autoplay muted loop playsinline></video>
+    <div class="scrim"></div>
+
+    <!-- Navigation (same as index) -->
+    <header class="navbar" id="navbar">
+        <div class="brand">
+            <img src="dps.png" alt="DPS East logo" class="brand-logo" />
+            <span class="name">DPS East</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link active" href="questions.html">Questions</a></li>
+                <li><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                <li class="nav-auth">
+                    <a class="nav-link accent" href="login.html" id="login-btn">Login</a>
+                    <div class="user-info" id="user-info" style="display: none;">
+                        <div class="team-display">
+                            <span class="team-label">Team:</span>
+                            <span class="team-name" id="team-name">Loading...</span>
+                        </div>
+                        <div class="points-display">
+                            <span class="points-label">Points:</span>
+                            <span class="points-value" id="points-value">0</span>
+                        </div>
+                        <div class="timer-display" id="timer-display" style="display: none;">
+                            <span class="timer-label">Time:</span>
+                            <span class="timer-value">00:00</span>
+                        </div>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section" id="levels">
+            <h1 class="title" data-reveal>QUESTIONS</h1>
+            <p class="subtitle" data-reveal>Three tiers of enigma. Begin where the signal is weakest and ascend.</p>
+
+            <!-- Level 1 -->
+            <div class="level" id="level-1" data-reveal>
+                <div class="level-header">
+                    <div class="level-title-row">
+                        <h2>Level 1</h2>
+                        <div class="time-display-box" id="level1-time-display" style="display: none;">
+                            <span class="time-label">Time:</span>
+                            <span class="time-value" id="level1-time-value">00:00</span>
+                        </div>
+                    </div>
+                    <span class="level-meta">7 Questions • 30 pts each</span>
+                </div>
+                <div class="card-grid">
+                    <a class="card" href="#q1" data-question-title="Question 1" data-question-body="Placeholder text for Level 1, Question 1."><span class="chip">L1</span><h3>Question 1</h3></a>
+                    <a class="card" href="#q2" data-question-title="Question 2" data-question-body="Placeholder text for Level 1, Question 2."><span class="chip">L1</span><h3>Question 2</h3></a>
+                    <a class="card" href="#q3" data-question-title="Question 3" data-question-body="Placeholder text for Level 1, Question 3."><span class="chip">L1</span><h3>Question 3</h3></a>
+                    <a class="card" href="#q4" data-question-title="Question 4" data-question-body="Placeholder text for Level 1, Question 4."><span class="chip">L1</span><h3>Question 4</h3></a>
+                    <a class="card" href="#q5" data-question-title="Question 5" data-question-body="Placeholder text for Level 1, Question 5."><span class="chip">L1</span><h3>Question 5</h3></a>
+                </div>
+            </div>
+
+            <!-- Level 2 -->
+            <div class="level locked" id="level-2" data-reveal>
+                <div class="level-header">
+                    <div class="level-title-row">
+                        <h2>Level 2</h2>
+                        <div class="time-display-box" id="level2-time-display" style="display: none;">
+                            <span class="time-label">Time:</span>
+                            <span class="time-value" id="level2-time-value">00:00</span>
+                        </div>
+                    </div>
+                    <span class="level-meta">5 Questions • 60 pts each • Unlock: 3 from L1</span>
+                </div>
+                <div class="card-grid">
+                    <a class="card" href="#q6" data-question-title="Question 6" data-question-body="Placeholder text for Level 2, Question 6."><span class="chip">L2</span><h3>Question 6</h3></a>
+                    <a class="card" href="#q7" data-question-title="Question 7" data-question-body="Placeholder text for Level 2, Question 7."><span class="chip">L2</span><h3>Question 7</h3></a>
+                    <a class="card" href="#q8" data-question-title="Question 8" data-question-body="Placeholder text for Level 2, Question 8."><span class="chip">L2</span><h3>Question 8</h3></a>
+                </div>
+            </div>
+
+            <!-- Level 3 -->
+            <div class="level locked" id="level-3" data-reveal>
+                <div class="level-header">
+                    <div class="level-title-row">
+                        <h2>Level 3</h2>
+                        <div class="time-display-box" id="level3-time-display" style="display: none;">
+                            <span class="time-label">Time:</span>
+                            <span class="time-value" id="level3-time-value">00:00</span>
+                        </div>
+                    </div>
+                    <span class="level-meta">3 Questions • 120 pts each • Unlock: 2 from L2</span>
+                </div>
+                <div class="card-grid">
+                    <a class="card" href="#q9" data-question-title="Final Question" data-question-body="Placeholder text for Level 3, Final Question."><span class="chip">L3</span><h3>Final Question</h3></a>
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- Modal Overlay for Question Content -->
+        <div class="modal-overlay" id="question-modal" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal-close" aria-label="Close">×</button>
+                <h3 id="modal-title">Question</h3>
+                <div class="modal-content">
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
